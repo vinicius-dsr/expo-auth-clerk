@@ -7,6 +7,8 @@ import {
 
 import { Ionicons } from "@expo/vector-icons";
 
+import { styles } from "./styles";
+
 interface ButtonProps extends TouchableOpacityProps {
 	title: string;
 	isLoading: boolean;
@@ -20,13 +22,18 @@ export function Button({
 	...rest
 }: ButtonProps) {
 	return (
-		<TouchableOpacity disabled={isLoading} activeOpacity={0.8} {...rest}>
+		<TouchableOpacity
+			style={styles.container}
+			disabled={isLoading}
+			activeOpacity={0.8}
+			{...rest}
+		>
 			{isLoading ? (
-				<ActivityIndicator />
+				<ActivityIndicator color="#fff" />
 			) : (
 				<>
-					<Ionicons name={icon} />
-					<Text>{title}</Text>
+					<Ionicons style={styles.icon} name={icon} />
+					<Text style={styles.text}>{title}</Text>
 				</>
 			)}
 		</TouchableOpacity>
