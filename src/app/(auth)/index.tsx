@@ -1,11 +1,9 @@
-import { Button } from "@/components/Button";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function SignIn() {
+export default function Home() {
 	return (
 		<View style={styles.container}>
-			<Text style={styles.title}>Entrar</Text>
-			<Button icon="logo-google" title="Entrar com Google" />
+			<Text style={styles.text}>Hello, User!</Text>
 		</View>
 	);
 }
@@ -15,10 +13,11 @@ const styles = StyleSheet.create({
 		flex: 1,
 		padding: 32,
 		justifyContent: "center",
-		gap: 2,
+		alignItems: "center",
+		gap: 12,
 	},
-	title: {
-		fontSize: 32,
+	text: {
+		fontSize: 16,
 		fontWeight: "bold",
 	},
 });
