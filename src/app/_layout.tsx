@@ -1,3 +1,4 @@
+import { tokenCache } from "@/storage/tokenCache";
 import { ClerkProvider, useAuth } from "@clerk/clerk-expo";
 import { Slot, router } from "expo-router";
 import { useEffect } from "react";
@@ -27,7 +28,7 @@ function InitialLayout() {
 
 export default function Layout() {
 	return (
-		<ClerkProvider publishableKey={api_key}>
+		<ClerkProvider publishableKey={api_key} tokenCache={tokenCache}>
 			<InitialLayout />
 		</ClerkProvider>
 	);

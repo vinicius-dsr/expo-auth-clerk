@@ -1,5 +1,6 @@
 import { Button } from "@/components/Button";
 import { useOAuth } from "@clerk/clerk-expo";
+import * as Liking from "expo-linking";
 import * as WebBrowser from "expo-web-browser";
 import { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
@@ -13,7 +14,11 @@ export default function SignIn() {
 		try {
 			setIsLoading(true);
 
-			const oAuthFlow = await googleAuth.startOAuthFlow();
+			const redirectUrl = Liking.createURL("/");
+
+			const oAuthFlow = await googleAuth.startOAuthFlow({
+				redirectUrl,
+			});
 			if (oAuthFlow.authSessionResult?.type === "success") {
 				if (oAuthFlow.setActive) {
 					await oAuthFlow.setActive({ session: oAuthFlow.createdSessionId });
