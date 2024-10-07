@@ -10,7 +10,12 @@ export default function Home() {
 		<View style={styles.container}>
 			<Image source={{ uri: user?.imageUrl }} style={styles.image} />
 			<Text style={styles.text}>Hello, {user?.fullName}!</Text>
-			<Button icon="exit" title="Sair" onPress={() => signOut()} />
+			<Button
+				icon="exit"
+				title="Sair"
+				onPress={() => signOut()}
+				isLoading={false}
+			/>
 		</View>
 	);
 }

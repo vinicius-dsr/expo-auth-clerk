@@ -12,9 +12,9 @@ function InitialLayout() {
 	useEffect(() => {
 		if (!isLoaded) return;
 		if (isSignedIn) {
-			router.replace("(auth)");
+			router.replace("/(auth)");
 		} else {
-			router.replace("(public)");
+			router.replace("/(public)");
 		}
 	}, [isSignedIn, isLoaded]);
 	return isLoaded ? (
