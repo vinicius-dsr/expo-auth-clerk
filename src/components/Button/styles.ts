@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "center",
 		gap: 7,
-		backgroundColor: "#000",
+		backgroundColor: "#001F3F",
 		padding: 22,
 		borderRadius: 16,
 	},

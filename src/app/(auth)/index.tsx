@@ -9,7 +9,7 @@ export default function Home() {
 	return (
 		<View style={styles.container}>
 			<Image source={{ uri: user?.imageUrl }} style={styles.image} />
-			<Text style={styles.text}>Hello, {user?.fullName}!</Text>
+			<Text style={styles.text}>Olá, {user?.fullName}!</Text>
 			<Button
 				icon="exit"
 				title="Sair"
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 		padding: 32,
 		justifyContent: "center",
 		alignItems: "center",
-		gap: 12,
+		gap: 16,
 	},
 	text: {
 		fontSize: 16,

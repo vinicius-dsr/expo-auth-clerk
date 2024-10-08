@@ -42,7 +42,7 @@ export default function SignIn() {
 
 	return (
 		<View style={styles.container}>
-			<Text style={styles.title}>Entrar</Text>
+			<Text style={styles.title}>Bem vindo!</Text>
 			<Button
 				icon="logo-google"
 				title="Entrar com Google"
@@ -57,11 +57,13 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		padding: 32,
+		alignItems: "center",
 		justifyContent: "center",
-		gap: 2,
+		gap: 16,
 	},
 	title: {
 		fontSize: 32,
+		color: "#001F3F",
 		fontWeight: "bold",
 	},
 });
